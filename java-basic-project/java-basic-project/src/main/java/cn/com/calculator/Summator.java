@@ -6,7 +6,7 @@ package cn.com.calculator;
  * @date:2020/12/28
  */
 public class Summator {
-    public int IntSummator(int num1,int num2){
+    public int intSummator(int num1, int num2){
         return num1+num2;
     }
 }
