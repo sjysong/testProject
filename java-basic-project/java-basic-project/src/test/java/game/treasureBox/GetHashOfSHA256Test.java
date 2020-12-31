@@ -25,7 +25,7 @@ public class GetHashOfSHA256Test extends TestCase {
         String openTime=new UtilityClass().getDateForStr(new Date());
         String boxSerialNum="1";
         String lastHash="0";
-        String mysteriousNum="103";
+        String mysteriousNum="1801415402";
         GetTreasureBoxHash getTreasureBoxHash=new GetTreasureBoxHash();
         String result=getTreasureBoxHash.getBoxHash(boxSerialNum,lastHash,mysteriousNum);
         String expected="3d396c2b66d43a7d5e6d52ba7a61f73220921f5070a78df5fcf377ac198b9991";

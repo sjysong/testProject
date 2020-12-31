@@ -2,6 +2,7 @@ package game.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 /**
  * 工具类
@@ -27,8 +28,8 @@ public class UtilityClass {
      * @param end
      * @return
      */
-    public String getRandomNum(int start, int end) {
-        int num = (int) (start + Math.random() * (end - start + start));
-        return Integer.toString(num);
+    public String getRandomNum() {
+        Random random = new Random();
+        return Integer.toString(random.nextInt());
     }
 }
