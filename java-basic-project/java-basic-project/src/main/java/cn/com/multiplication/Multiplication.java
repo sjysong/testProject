@@ -1,5 +1,7 @@
 package cn.com.multiplication;
 
+import java.io.IOException;
+
 /**
  * 乘法器
  * @auther:90611
@@ -13,7 +15,8 @@ public class Multiplication {
      * @param num2
      * @return
      */
-    public int intMultiplication(int num1, int num2) {
+    public int intMultiplication(int num1, int num2) throws IOException {
         return num1 * num2;
     }
+
 }

@@ -1,5 +1,6 @@
 package cn.com.subtracter;
 
+import cn.com.ioFlow.TxtFlow;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,6 +12,9 @@ import org.junit.Test;
 public class SubtractionTest extends TestCase {
     @Test
     public void test_int_sub_int(){
+        TxtFlow t=new TxtFlow();
+        t.readFile();
+
         Subtraction subtraction=new Subtraction();
         int subResult=subtraction.intSubtraction(10,2);
         int expected=8;
