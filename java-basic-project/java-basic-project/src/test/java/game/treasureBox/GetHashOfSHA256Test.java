@@ -1,6 +1,9 @@
 package game.treasureBox;
 
+import game.util.UtilityClass;
 import junit.framework.TestCase;
+
+import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,6 +18,17 @@ public class GetHashOfSHA256Test extends TestCase {
         String result=getHashOfSHA256.getHashOfSHA256(testStr);
         String expected="9d19eb765a5b4b4ab75eb8e92703dc80b65f12262112e5ecc1e4366af0b5e717";
 
+        assertEquals(expected,result);
+    }
+
+    public void test_verify_can_get_the_treasure_box_hash_value(){
+        String openTime=new UtilityClass().getDateForStr(new Date());
+        String boxSerialNum="1";
+        String lastHash="0";
+        String mysteriousNum="555";
+        GetTreasureBoxHash getTreasureBoxHash=new GetTreasureBoxHash();
+        String result=getTreasureBoxHash.getBoxHash(boxSerialNum,openTime,lastHash,mysteriousNum);
+        String expected="9d19eb765a5b4b4ab75eb8e92703dc80b65f12262112e5ecc1e4366af0b5e717";
         assertEquals(expected,result);
     }
 }
