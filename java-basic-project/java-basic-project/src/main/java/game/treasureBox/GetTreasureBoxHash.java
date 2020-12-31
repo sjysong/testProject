@@ -5,9 +5,20 @@ package game.treasureBox;
  * @date:2020/12/31
  */
 public class GetTreasureBoxHash {
-    public String getBoxHash(String boxSerialNum, String openTime, String lastHash, String mysteriousNum) {
-        String hashStr = boxSerialNum + openTime + lastHash + mysteriousNum;
+    /**
+     * 获取神秘宝箱的Hash值
+     * @param boxSerialNum
+     * @param lastHash
+     * @param mysteriousNum
+     * @return
+     */
+    public String getBoxHash(String boxSerialNum, String lastHash, String mysteriousNum) {
+        if("1".equals(boxSerialNum)){
+            lastHash = "0";
+        }
+        String hashStr = boxSerialNum + lastHash + mysteriousNum;
         GetHashOfSHA256 getHashOfSHA256 = new GetHashOfSHA256();
         return getHashOfSHA256.getHashOfSHA256(hashStr);
     }
+
 }

@@ -20,4 +20,15 @@ public class UtilityClass {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
         return dateFormat.format(date);
     }
+
+    /**
+     * 获取随机数字
+     * @param start
+     * @param end
+     * @return
+     */
+    public String getRandomNum(int start, int end) {
+        int num = (int) (start + Math.random() * (end - start + start));
+        return Integer.toString(num);
+    }
 }
